@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Header from "./components/Header";
+import Banner from "./components/Banner";
+import { Count } from "./components/Count";
+// import { Form } from "./sample/components/Form";
+import { Timer } from "./sample/components/TimerForm";
+import {TimerDashboard} from './sample/components/TimerDashboard'
+import ClickCounter from "./HOC/ClickCounter";
+import "../src/styles/styles.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [voteUp, setVoteUp] = useState(0);
+	const [voteDown, setVoteDown] = useState(0);
+
+	const handleVoteUp = (e) => {
+		setVoteUp(voteUp + 1);
+	};
+
+	const handleVoteDown = (e) => {
+		setVoteUp(voteUp - 1);
+	};
+	return (
+		<div className="App">
+			<div className="App-header">
+
+				<ClickCounter />
+				{/* <Header /> */}
+
+				{/* <Banner /> */}
+				{/* <Form /> */}
+				{/* <Timer /> */}
+				{/* <TimerDashboard /> */}
+				{/* <Count
+				count={voteUp}
+        countDown={voteDown}
+				increament={handleVoteUp}
+				decreament={handleVoteDown}
+			/> */}
+			</div>
+		</div>
+	);
 }
 
 export default App;
