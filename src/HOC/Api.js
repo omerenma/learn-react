@@ -13,7 +13,8 @@ class Api extends Component {
 	componentDidMount() {
 		const { request } = this.props;
 		const method = "get";
-		request("https://jsonplaceholder.typicode.com/todos/1", method);
+		const endpoint = "/post/1";
+		request("https://jsonplaceholder.typicode.com/users", method);
 	}
 	render() {
 		const { data } = this.props;
@@ -21,7 +22,18 @@ class Api extends Component {
 			<div>
 				<h1 style={{ color: "black" }}>API Data</h1>
 				<p style={{ color: "black" }}>
-					{data.data === undefined ? "Loading..." : data.data.title}
+					{data.data === undefined
+						? "Loading..."
+						: data.data.map((user) => (
+								<ul
+									key={user.id}
+									style={{ listStyle: "none", textAlign: "left" }}
+								>
+									<li style={{ borderBottom: "1px solid grey" }}>
+										{user.name}
+									</li>
+								</ul>
+						  ))}
 				</p>
 			</div>
 		);
