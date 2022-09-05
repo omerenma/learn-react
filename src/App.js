@@ -8,6 +8,7 @@ import { Timer } from "./sample/components/TimerForm";
 import { TimerDashboard } from "./sample/components/TimerDashboard";
 import ClickCounter from "./HOC/ClickCounter";
 import HoverCounnter from "./HOC/HoverCounnter";
+import Api from "./HOC/Api";
 import "../src/styles/styles.css";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
 	return (
 		<div className="App">
 			<div className="App-header">
+				<Api />
 				<ClickCounter />
 				<HoverCounnter />
 				{/* <Header /> */}
