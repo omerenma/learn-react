@@ -5,8 +5,9 @@ import Banner from "./components/Banner";
 import { Count } from "./components/Count";
 // import { Form } from "./sample/components/Form";
 import { Timer } from "./sample/components/TimerForm";
-import {TimerDashboard} from './sample/components/TimerDashboard'
+import { TimerDashboard } from "./sample/components/TimerDashboard";
 import ClickCounter from "./HOC/ClickCounter";
+import HoverCounnter from "./HOC/HoverCounnter";
 import "../src/styles/styles.css";
 
 function App() {
@@ -23,8 +24,8 @@ function App() {
 	return (
 		<div className="App">
 			<div className="App-header">
-
 				<ClickCounter />
+				<HoverCounnter />
 				{/* <Header /> */}
 
 				{/* <Banner /> */}
