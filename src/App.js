@@ -11,6 +11,7 @@ import ClickCounter from "./HOC/ClickCounter";
 import HoverCounnter from "./HOC/HoverCounnter";
 import Api from "./HOC/Api";
 import "../src/styles/styles.css";
+import Buttons from "./HOC/Buttons";
 
 function App() {
 	const [voteUp, setVoteUp] = useState(0);
@@ -36,7 +37,7 @@ function App() {
 				{/* <Banner /> */}
 				{/* <Form /> */}
 				{/* <Timer /> */}
-				<TimerDashboard />
+				{/* <TimerDashboard /> */}
 				{/* <Count
 				count={voteUp}
         countDown={voteDown}
