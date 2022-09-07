@@ -19,6 +19,10 @@ const withCounter = (WrappedComponent) => {
 				<WrappedComponent
 					count={this.state.count}
 					increamentCount={this.increamentCount}
+                    // when u create HOC, make sure to pass other props using {...this.props} 
+                    // in ClickCounter component rendered in App.js I passed a name props
+                    // if I don't add {...this.props} there the, the child component won't have access to props.
+                    // {...this.props}
 				/>
 			);
 		}

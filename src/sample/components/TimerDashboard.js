@@ -4,6 +4,7 @@ import { EditableTimerList } from "./EditableTimerList";
 import { ToggleableForm } from "./ToggleableTimerForm";
 
 export const TimerDashboard = () => {
+  // Implementt lazy loading
 	const { v4: uuid } = require("uuid");
 	const [timers, setTimers] = useState([
 		{

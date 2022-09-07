@@ -6,6 +6,7 @@ import { Count } from "./components/Count";
 // import { Form } from "./sample/components/Form";
 import { Timer } from "./sample/components/TimerForm";
 import { TimerDashboard } from "./sample/components/TimerDashboard";
+// import {EditableTimerList} from './sample/components/EditableTimerList'
 import ClickCounter from "./HOC/ClickCounter";
 import HoverCounnter from "./HOC/HoverCounnter";
 import Api from "./HOC/Api";
@@ -26,14 +27,16 @@ function App() {
 		<div className="App">
 			<div className="App-header">
 				<Api />
-				<ClickCounter />
-				<HoverCounnter />
+				<div>
+					<ClickCounter name="John Doe" />
+					<HoverCounnter />
+				</div>
 				{/* <Header /> */}
 
 				{/* <Banner /> */}
 				{/* <Form /> */}
 				{/* <Timer /> */}
-				{/* <TimerDashboard /> */}
+				<TimerDashboard />
 				{/* <Count
 				count={voteUp}
         countDown={voteDown}
